@@ -33,12 +33,6 @@ function buildCharts(sample) {
   let sampleURL = "http://127.0.0.1:5000/samples/" + sample;
   console.log(`sampleURL is: ${sampleURL}`);
 
-  // // Use d3 to select the charts with id of `#pie` and `#bubble`
-  // let $pie = d3.select("#pie");
-  // let $bubble = d3.select("#bubble");
-  // // Use `.html("") to clear any existing charts
-  // $pie.html("");
-  // $bubble.html("");
 
   d3.json(sampleURL).then(function(data) {
     // set bubble chart data
@@ -61,6 +55,7 @@ function buildCharts(sample) {
       text: bubbleText,
       marker: {
         color: bubbleMarkerColor,
+        colorscale: 'Rainbow',
         size: bubbleMarkerSize
       }
     };
