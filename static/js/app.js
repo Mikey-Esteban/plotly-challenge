@@ -3,7 +3,7 @@ function buildMetadata(sample) {
   // @TODO: Complete the following function that builds the metadata panel
 
   // Get metadata information for the specific sample from the metadata url/endpoint
-  let sampleURL = "http://127.0.0.1:5000/metadata/" + sample;
+  let sampleURL = "/metadata/" + sample;
   console.log(`sampleURL is: ${sampleURL}`);
 
   // Use `d3.json` to fetch the metadata for a sample
@@ -30,7 +30,7 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
 
   // @TODO: Use `d3.json` to fetch the sample data for the plots
-  let sampleURL = "http://127.0.0.1:5000/samples/" + sample;
+  let sampleURL = "/samples/" + sample;
   console.log(`sampleURL is: ${sampleURL}`);
 
 
